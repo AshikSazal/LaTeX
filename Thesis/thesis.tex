@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{book}
+
+\begin{document}
+\tableofcontents
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+\Huge
+\textbf{Thesis Title}\\
+\vspace{.5cm}
+\LARGE
+Thesis Subtitle\\
+\vspace{1.5cm}
+\textbf{Author Name}
+\vfill
+A thesis presentation for degree of\\Doctor of Philosophy\\
+\vspace{1cm}
+\Large
+Department Name\\
+University Name\\
+Country\\
+Date
+\end{center}
+\end{titlepage}
+\begin{flushright}
+\chapter*{Introduction to Fundamental Computer Science}
+\end{flushright}
+\section{Introduction}
+Although the definition of readability is quite vague, it is generally understood to
+be the ease of reading and comprehending texts. The acceptability of a writer
+work depends upon how much the text is readable and understandable to the
+mass. This encouraged research in the fields of people reading skills and
+quantification of readability. Although some researchers like Pikulski 
+have questioned such quantification in the form of automatic readability scoring
+\section{Related Work}
+Most of the classical formulas depend on surface-level
+features such as average sentence length (ASL), average word length
+(AWL), number of syllables and number of polysyllabic words. Senter
+and Smith ($1967$) argued that factors related to word difficulty and sentence
+difficulty were more important than surface features. Liu, Croft, Oh, and
+Hart ($2004$) treated readability estimation as a text categorization problem
+and used support vector machines (SVM) on syntactic and semantic features.
+Feng et al. ($2010$) did a comprehensive feature analysis for readability
+modelling. They considered several fine-grained feature categories like
+shallow features, discourse features, POS-based features, language modelling
+features, lexical chain features, etc. They observed that POS features
+(nouns in particular) and shallow features (average sentence length) had the
+best predictive performance.
+A few researchers such as Pikulski argued against the use of mathematical
+readability formulas (Pikulski., $2002$). Pikulski affirms what the
+International Reading Association points out as the two major clusters of
+factors that are not assessed by readability formulas. First is the conceptual
+readability, consisting of factors such as 'density of concepts, abstractness of
+ideas, text organization and coherence and sequence of ideas, and second is
+the format or design cluster consisting of page format, length of type line,
+length of paragraphs, and the use of illustrations and color (Gray and Leary,
+$1935$). Durr, Hillerich, and Mifflin ($1986$) tried to overcome this problem
+and incorporated the interaction between readers (students) and readability
+formulas \\
+\begin{center}
+\begin{tabular}{cccccccccccccc}
+\hline
+\textbf{Author}&\textbf{kids}&\textbf{Adults}&\textbf{total}&\textbf{Sadhu Basha}&\textbf{Chalit Bhasha} &\textbf{Total}\\
+\hline
+Rabindra Nath Tagore& 4& 8& 12& 8&4 &12\\
+Bankim Chandra Chattopadhyay& 0& 6& 6& 6& 3& 9\\
+Bibhuti Bhusan Bandopadhyay &1 &2 &3& 6& 0& 6\\
+Sarat Chandra Chattopadhyay& 4& 5& 9 &1& 2& 3\\
+Total& 9& 21& 30& 21& 9 &30 \\
+\hline
+
+
+\end{tabular}
+\end{center}
+
+ \begin{enumerate}
+ 	 \item Easy to read \item Somewhat easy to read \item In-between Somewhat di?cult to read \item Di?cult to read \item Very di?cult to read
+ 	
+\end{enumerate}
+\section{Inter-Annotator Agreement}
+This rating scale reflects the fact that readability is not a binary/ternary
+variable; it is an ordinal variable. We further collected the data on whether
+the annotators were avid readers of Bengali or not. Each annotator rated
+every passage. It is worth mentioning that readability annotation in Bengali
+is challenging because passages written in sadhu bhasha tend to be harder
+to read than those written in cholit bhasha. Since our dataset contains both
+sadhu bhasha and cholit bhasha, maintaining consistency in readability
+rating becomes a big issue.
+
+Before proceeding to model generation a study of inter-annotator (or inter-rater)
+agreement between the raterswas done.On the basis of ratings given by the seven
+annotators, we studied whether they agreed among each other. We used
+Spearmans rank correlation coefficient ($?$) as shown in Equation ($1$) and
+Cohens kappa ($?$) as shown in Equation ($2$). Results indicate that there is
+moderate to fair agreement among the seven annotators (Phani, Lahiri, 
+Biswas, $2014$), which in turn indicates that human annotators agreed pretty
+well with respect to Bengali readability scoring. Mean ratings were then used
+for readability modelling.
+$$(R)=1-\frac{(6*\sum{d^2})}{n^3-n}$$
+where
+R is the Spearman's Rank correlation coefficient,
+d is the difference in ranks, and
+n is the number of annotators.
+\end{document}

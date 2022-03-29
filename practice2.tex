@@ -1,0 +1,12 @@
+\documentclass[a4paper]{article}
+\usepackage{tikz}
+\newcommand{\roundpic}[4][]{
+  \tikz\node [circle, minimum width = #2,
+    path picture = {
+      \node [#1] at (path picture bounding box.center) {
+        \includegraphics[width=#3]{#4}};
+    }] {};}
+
+\begin{document}
+\roundpic[xshift=0cm,yshift=-2.6cm]{8cm}{5cm}{pic}
+\end{document}
